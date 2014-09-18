@@ -33,30 +33,8 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  */
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == comment.file-description == start ==
-/*
- * =====================================================================================
- *
- *       Filename:  |FILENAME|
- *
- *    Description:  <CURSOR>
- *
- *        Version:  1.0
- *        Created:  |DATE| |TIME|
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  |AUTHOR| (|AUTHORREF|), |EMAIL|
- *   Organization:  |ORGANIZATION|
- *
- * =====================================================================================
- */
-#include <stdlib.h>
-$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-== comment.file-description-header == start ==
-#ifndef |BASENAME|_H
-#define |BASENAME|_H
 /*!
-  @file |PATH|/|FILENAME| 
+  @file |FILENAME| 
 
   @brief
   <CURSOR>.   
@@ -65,7 +43,46 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   |COPYRIGHT|
 */
 
-/*===========================================================================
+/*!===========================================================================
+
+HISTORY FOR MODULE:
+
+Created @ |PATH|/|FILENAME|
+
+when         who     what, where, why
+-------------------------------------------------------------------------------- 
+|DATE|   |AUTHORREF|   Initial Rev.
+
+===========================================================================*/
+
+#include "|FILENAME|.h"
+
+
+#ifdef __cplusplus
+extern "C" 
+{
+#endif   /* #ifdef __cplusplus */
+
+#include <stdlib.h>
+
+#ifdef __cplusplus
+}
+#endif   /* #ifdef __cplusplus */
+$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.file-description-header == start ==
+#ifndef |BASENAME|_H
+#define |BASENAME|_H
+/*!
+  @file |FILENAME| 
+
+  @brief
+  <CURSOR>.   
+
+
+  |COPYRIGHT|
+*/
+
+/*!===========================================================================
 
 HISTORY FOR MODULE:
 

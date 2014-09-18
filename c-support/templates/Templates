@@ -8,7 +8,7 @@ $
 |EMAIL|     = 
 |COMPANY|   = BlackBerry Limited
 |COPYRIGHT| = Copyright (c) |YEAR|, |COMPANY|. All Rights Reserved 
-|STYLE|     = default
+|STYLE|     = H
 $
 $ =============================================================
 $ ========== FILE INCLUDES ====================================
@@ -19,6 +19,14 @@ $
 |includefile| = c.idioms.template
 |includefile| = c.preprocessor.template
 |includefile| = c.statements.template
+$
+== IF |STYLE| IS H ==
+|includefile| = h.comments.template
+|includefile| = h.cpp.template
+|includefile| = h.idioms.template
+|includefile| = h.preprocessor.template
+|includefile| = h.statements.template
+== ENDIF ==
 $
 == IF |STYLE| IS CPP ==
 |includefile| = cpp.comments.template
