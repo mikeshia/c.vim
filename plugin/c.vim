@@ -3060,7 +3060,7 @@ function! C_InsertTemplate ( key, ... )
 			" proper indenting
 			exe ":".pos1
 			let ins	= pos2-pos1+1
-			exe "normal ".ins."=="
+			" exe "normal ".ins."=="
 			"
 		elseif mode == 'above'
 			let pos1  = line(".")
@@ -3068,26 +3068,26 @@ function! C_InsertTemplate ( key, ... )
 			let pos2  = line(".")
 			" proper indenting
 			exe ":".pos1
-			let ins	= pos2-pos1+1
-			exe "normal ".ins."=="
-			"
-		elseif mode == 'start'
-			normal gg
-			call C_OpenFold('start')
-			let pos1  = 1
-			put! =val
-			let pos2  = line(".")
-			" proper indenting
-			exe ":".pos1
-			let ins	= pos2-pos1+1
-			exe "normal ".ins."=="
-			"
-		elseif mode == 'append'
-			if &foldenable && foldclosed(".") >= 0
-				echohl WarningMsg | echomsg s:MsgInsNotAvail  | echohl None
-				exe "set foldmethod=".foldmethod_save
-				return
-			else
+      let ins	= pos2-pos1+1
+      " exe "normal ".ins."=="
+      "
+    elseif mode == 'start'
+      normal gg
+      call C_OpenFold('start')
+      let pos1  = 1
+      put! =val
+      let pos2  = line(".")
+      " proper indenting
+      exe ":".pos1
+      let ins	= pos2-pos1+1
+      " exe "normal ".ins."=="
+      "
+    elseif mode == 'append'
+      if &foldenable && foldclosed(".") >= 0
+        echohl WarningMsg | echomsg s:MsgInsNotAvail  | echohl None
+        exe "set foldmethod=".foldmethod_save
+        return
+      else
 				let pos1  = line(".")
 				put =val
 				let pos2  = line(".")-1
@@ -3111,7 +3111,7 @@ function! C_InsertTemplate ( key, ... )
 				if pos2-pos1 > 0 || currentline =~ ''
 					exe ":".pos1
 					let ins	= pos2-pos1+1
-					exe "normal ".ins."=="
+					" exe "normal ".ins."=="
 				endif
 			endif
 			"
@@ -3172,7 +3172,7 @@ function! C_InsertTemplate ( key, ... )
 				"			" proper indenting
 				exe ":".pos1
 				let ins	= pos2-pos1+1
-				exe "normal ".ins."=="
+				" exe "normal ".ins."=="
 			endif
 			"
 		endif		" ---------- end visual mode
@@ -3219,6 +3219,7 @@ function! C_InsertTemplate ( key, ... )
 	endif
 
 endfunction    " ----------  end of function C_InsertTemplate  ----------
+
 
 "------------------------------------------------------------------------------
 "  C_HighlightJumpTargets
