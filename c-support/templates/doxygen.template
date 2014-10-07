@@ -286,31 +286,31 @@ weakgroup
 xmlonly
 xrefitem
 == LIST: doxygen_esc_char == list ==
-	'$',
-	'@',
-	'&',
-	'~',
-	'<',
-	'>',
-	'#',
-	'%',
-	'"',
-	'.',
-	'::',
+  '$',
+  '@',
+  '&',
+  '~',
+  '<',
+  '>',
+  '#',
+  '%',
+  '"',
+  '.',
+  '::',
 == LIST: doxygen_page_cmd == hash ==
-	'mainpage' : '{+TITLE_OPT_+}',
-	'page'     : '{+REF+} {+TITLE+}',
-	'subpage'  : '{+REF+} {+TEXT_OPT_+}',
+  'mainpage' : '{+TITLE_OPT_+}',
+  'page'     : '{+REF+} {+TITLE+}',
+  'subpage'  : '{+REF+} {+TEXT_OPT_+}',
 
-	'tableofcontents' : '',
+  'tableofcontents' : '',
 
-	'section'       : '{+REF+} {+TITLE+}',
-	'subsection'    : '{+REF+} {+TITLE+}',
-	'subsubsection' : '{+REF+} {+TITLE+}',
-	'paragraph'     : '{+REF+} {+TITLE+}',
+  'section'       : '{+REF+} {+TITLE+}',
+  'subsection'    : '{+REF+} {+TITLE+}',
+  'subsubsection' : '{+REF+} {+TITLE+}',
+  'paragraph'     : '{+REF+} {+TITLE+}',
 
-	'anchor' : '{+REF+}',
-	'ref'    : '{+REF+} {+TEXT_OPT_+}',
+  'anchor' : '{+REF+}',
+  'ref'    : '{+REF+} {+TEXT_OPT_+}',
 == ENDLIST ==
 
 § The template "Doxygen.brief, after member" is used for the menu entry
