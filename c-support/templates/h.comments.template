@@ -54,6 +54,10 @@ when         who     what, where, why
 |DATE|   |AUTHORREF|   Initial Rev.
 
 ===========================================================================*/
+#if defined(_UNITTEST_MODULE_)
+#include <iostream>
+using namespace std;
+#endif // _UNITTEST_MODULE_
 
 #include "|FILENAME|.h"
 
@@ -61,13 +65,34 @@ when         who     what, where, why
 #ifdef __cplusplus
 extern "C" 
 {
-#endif   /* #ifdef __cplusplus */
+#endif   // #ifdef __cplusplus
 
 #include <stdlib.h>
 
 #ifdef __cplusplus
 }
-#endif   /* #ifdef __cplusplus */
+#endif   // __cplusplus 
+
+// ================================
+// Module Unit Testing
+// ================================
+#if defined(_UNITTEST_MODULE_)
+
+int
+_unitTest(void)
+{
+
+}
+
+#if defined(_UNITTEST_MODULE_MAIN_)
+int
+main(int /*argc*/, char** /*argv*/)
+{
+   return _unitTest();
+}
+#endif // _UNITTEST_MODULE_MAIN_ 
+#endif // _UNITTEST_MODULE_
+
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == comment.file-description-header == start ==
 #ifndef |BASENAME|_H

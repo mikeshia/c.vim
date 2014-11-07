@@ -87,31 +87,41 @@ inline void
 <CURSOR>
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == cpp.class-definition ==
-/*
- * =====================================================================================
- *        Class:  |?CLASSNAME:c|
- *  Description:  <CURSOR>
- * =====================================================================================
- */
+//
+// =====================================================================================
+//        Class:  |?CLASSNAME:c|
+//  Description:  <CURSOR>
+// =====================================================================================
+//
 class |CLASSNAME|
 {
   public:
-    /* ====================  LIFECYCLE     ======================================= */
-    |CLASSNAME| ();                             /* constructor */
+  // #Public class construction/destruction
+  // --------------------------------------
+    |CLASSNAME| ();                             // constructor     
 
-    /* ====================  ACCESSORS     ======================================= */
+  // #Public accessors
+  // -----------------
 
-    /* ====================  MUTATORS      ======================================= */
 
-    /* ====================  OPERATORS     ======================================= */
+  // #Public operator
+  // ----------------
 
   protected:
-    /* ====================  DATA MEMBERS  ======================================= */
+  // #Protect data
+  // -------------
 
   private:
-    /* ====================  DATA MEMBERS  ======================================= */
+  // #Private class construction/destruction/operator 
+  // ------------------------------------------------
+    |CLASSNAME| ( const |CLASSNAME| &other );   // copy constructor
+    |CLASSNAME|& operator = ( const |CLASSNAME| &other ); // assignment operator 
+    ~|CLASSNAME| ();                            // destructor      
 
-}; /* -----  end of class |CLASSNAME|  ----- */
+  // #Private data
+  // -------------
+
+}; // -----  end of class |CLASSNAME|
 
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == cpp.class-implementation ==
@@ -137,24 +147,29 @@ $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 class |CLASSNAME|
 {
   public:
-    /* ====================  LIFECYCLE     ======================================= */
-    |CLASSNAME| ();                             /* constructor      */
-    |CLASSNAME| ( const |CLASSNAME| &other );   /* copy constructor */
-    ~|CLASSNAME| ();                            /* destructor       */
+  // #Public class construction/destruction
+  // --------------------------------------
+    |CLASSNAME| ();                             // constructor     
 
-    /* ====================  ACCESSORS     ======================================= */
+  // #Public accessors
+  // -----------------
 
-    /* ====================  MUTATORS      ======================================= */
 
-    /* ====================  OPERATORS     ======================================= */
-
-    |CLASSNAME|& operator = ( const |CLASSNAME| &other ); /* assignment operator */
+  // #Public operator
+  // ----------------
 
   protected:
     /* ====================  DATA MEMBERS  ======================================= */
 
   private:
-    /* ====================  DATA MEMBERS  ======================================= */
+  // #Private class construction/destruction/operator 
+  // ------------------------------------------------
+    |CLASSNAME| ( const |CLASSNAME| &other );   // copy constructor
+    |CLASSNAME|& operator = ( const |CLASSNAME| &other ); /* assignment operator */
+    ~|CLASSNAME| ();                            // destructor      
+
+  // #Private data
+  // -------------
 
 }; /* -----  end of class |CLASSNAME|  ----- */
 
