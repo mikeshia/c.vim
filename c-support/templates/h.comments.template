@@ -81,12 +81,12 @@ extern "C"
 int
 _unitTest(void)
 {
-
+  return 0;
 }
 
 #if defined(_UNITTEST_MODULE_MAIN_)
 int
-main(int /*argc*/, char** /*argv*/)
+main(int argc, char** argv)
 {
    return _unitTest();
 }
