@@ -3,7 +3,6 @@
 "  DESCRIPTION:  suggestion for a personal configuration file ~/.vimrc
 "       AUTHOR:  Dr.-Ing. Fritz Mehner
 "      CREATED:  04.04.2009
-"     REVISION:  $Id: customization.vimrc,v 1.6 2009/10/03 12:24:30 mehner Exp $
 "===================================================================================
 "
 "===================================================================================
@@ -212,7 +211,7 @@ inoremap <silent> <F11>  <Esc><Esc>:Tlist<CR>
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select 				= 1
 
-let tlist_make_settings  = 'make;m:makros;t:targets'
+let tlist_make_settings  = 'make;v:variables;t:targets;i:includes'
 let tlist_qmake_settings = 'qmake;t:SystemVariables'
 
 if has("autocmd")

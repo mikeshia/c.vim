@@ -2,39 +2,27 @@
 "
 " Vim filetype plugin file
 "
-"   Language :  C
+"   Language :  C++
 "     Plugin :  c.vim 
 " Maintainer :  Wolfgang Mehner <wolfgang-mehner@web.de>
-"               (formerly Fritz Mehner <mehner.fritz@web.de>)
 "
 " ------------------------------------------------------------------------------
 "
 " Only do this when not done yet for this buffer
 " 
-if exists("b:did_C_ftplugin")
+if exists("b:did_CPP_ftplugin")
   finish
 endif
-let b:did_C_ftplugin = 1
+let b:did_CPP_ftplugin = 1
 "
 "-------------------------------------------------------------------------------
-" additional mapping : complete a classical C comment: '/*' => '/* | */'
+" additional mapping : C++ I/O
 "-------------------------------------------------------------------------------
-inoremap  <buffer>  /*       /*<Space><Space>*/<Left><Left><Left>
-vnoremap  <buffer>  /*      s/*<Space><Space>*/<Left><Left><Left><Esc>p
 "
-"-------------------------------------------------------------------------------
-" additional mapping : complete a classical C multi-line comment: 
-"                      '/*<CR>' =>  /*
-"                                    * |
-"                                    */
-"-------------------------------------------------------------------------------
-inoremap  <buffer>  /*<CR>  /*<CR><CR>/<Esc>kA<Space>
-"
-"-------------------------------------------------------------------------------
-" additional mapping : {<CR> always opens a block
-"-------------------------------------------------------------------------------
-inoremap  <buffer>  {<CR>    {<CR>}<Esc>O
-vnoremap  <buffer>  {<CR>   S{<CR>}<Esc>Pk=iB
+inoremap	<buffer>	>> <Space>>><Space>
+inoremap	<buffer>	<< <Space><<<Space>
+inoremap	<buffer>	<<" <Space><< ""<Space><Left><Left>
+inoremap	<buffer>	<<; <Space><< "\n";<Left><Left><Left><Left>
 "
 "-------------------------------------------------------------------------------
 " set "maplocalleader" as configured using "g:C_MapLeader"
